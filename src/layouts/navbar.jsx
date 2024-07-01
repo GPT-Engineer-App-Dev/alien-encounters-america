@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2 } from "lucide-react";
+import { CircleUser, Menu, Rocket } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
 
@@ -24,6 +24,15 @@ const Layout = () => {
       <main className="flex-grow p-4 overflow-auto">
         <Outlet />
       </main>
+      <footer className="border-t bg-background p-4 text-center">
+        <p>© 2023 UFO Watch USA. All rights reserved.</p>
+        <div className="flex justify-center space-x-4">
+          <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Instagram</a>
+        </div>
+        <p className="mt-2 text-sm text-muted-foreground">Disclaimer: The authenticity of the reports is not verified.</p>
+      </footer>
     </div>
   );
 };
@@ -34,8 +43,8 @@ const DesktopNav = () => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
-      <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <Rocket className="h-6 w-6" />
+      <span>UFO Watch USA</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
@@ -59,8 +68,8 @@ const MobileNav = () => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
-          <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <Rocket className="h-6 w-6" />
+          <span>UFO Watch USA</span>
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
