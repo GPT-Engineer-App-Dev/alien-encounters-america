@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { newImage } from "@/utils/newImage";
+import NewImage from "@/utils/newImage";
 
 const Index = () => {
   return (
     <div className="text-center space-y-6">
       <div className="relative w-full h-64">
-        <newImage
+        <NewImage
           src="/images/hero-background.jpg"
           alt="Night sky with UFOs"
           className="absolute inset-0 w-full h-full object-cover"
